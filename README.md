@@ -132,7 +132,7 @@ Aqui está um exemplo da estrutura JSON representando as informações do `Produ
     "nome": "string",
     "desc": "string",
     "valor": "double",
-    "quantidade": "in",
+    "quantidade": "int",
 }
 ```
 
