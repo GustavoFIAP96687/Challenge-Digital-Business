@@ -135,3 +135,12 @@ Aqui está um exemplo da estrutura JSON representando as informações do `Produ
     "quantidade": "in",
 }
 ```
+
+## Códigos de retorno(Consumidor, fornecedor e produto)
+
+- 200: Conexão e resposta bem-sucedidas.
+- 201: Registrado com sucesso.
+- 400: Dados inválidos ou ausentes fornecidos.
+- 404: Página ou recurso não encontrado.
+- 405: Acesso restrito ao recurso.
+- 500: Erro interno do servidor.
