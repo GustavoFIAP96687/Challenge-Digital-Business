@@ -96,4 +96,42 @@ A classe `Produto` contém informações detalhadas sobre os produtos disponíve
 
 Lembre-se de incluir os parâmetros necessários na sua solicitação para obter os resultados desejados.
 
+## Exemplo JSON
 
+Aqui está um exemplo da estrutura JSON representando as informações do `Consumidor`:
+
+```json
+{
+    "id": "Long",
+    "nome": "string",
+    "rfq": "string",
+    "cnpj": "string",
+    "cep": "string",
+    "numero": "int",
+}
+```
+
+Aqui está um exemplo da estrutura JSON representando as informações do `Fornecedor`:
+
+```json
+{
+    "id": "Long",
+    "nome": "string",
+    "rfq": "string",
+    "cnpj": "string",
+    "cep": "string",
+    "numero": "int",
+}
+```
+
+Aqui está um exemplo da estrutura JSON representando as informações do `Produto`:
+
+```json
+{
+    "id": "long",
+    "nome": "string",
+    "desc": "string",
+    "valor": "double",
+    "quantidade": "in",
+}
+```
