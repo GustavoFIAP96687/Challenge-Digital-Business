@@ -107,7 +107,7 @@ Aqui está um exemplo da estrutura JSON representando as informações do `Consu
     "rfq": "string",
     "cnpj": "string",
     "cep": "string",
-    "numero": "int",
+    "numero": "int"
 }
 ```
 
@@ -117,10 +117,9 @@ Aqui está um exemplo da estrutura JSON representando as informações do `Forne
 {
     "id": "Long",
     "nome": "string",
-    "rfq": "string",
     "cnpj": "string",
     "cep": "string",
-    "numero": "int",
+    "numero": "int"
 }
 ```
 
@@ -132,7 +131,7 @@ Aqui está um exemplo da estrutura JSON representando as informações do `Produ
     "nome": "string",
     "desc": "string",
     "valor": "double",
-    "quantidade": "int",
+    "quantidade": "int"
 }
 ```
 

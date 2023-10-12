@@ -7,6 +7,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 //import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -26,14 +27,15 @@ public class Produto {
     @NotBlank
     private String nome;
 
+    @NotBlank
     private String desc;
     
-    @NotBlank
-    @Positive
+    @Positive(message = "O valor deve ser positivo")
+    @NotNull
     private Double valor;
 
-    @NotBlank
-    @Positive
+    @Positive(message = "A quantidade deve ser positiva")
+    @NotNull
     private int quantidade;
 
 
