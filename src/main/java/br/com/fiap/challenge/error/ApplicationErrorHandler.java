@@ -2,7 +2,7 @@ package br.com.fiap.challenge.error;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.http.HttpStatus;
-import org.springframework.validation.BindingResult;
+//import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;

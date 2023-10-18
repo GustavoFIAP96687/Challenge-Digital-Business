@@ -7,7 +7,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Positive;
+//import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -32,10 +32,9 @@ public class Fornecedor {
     private String cnpj;
 
     @NotBlank
-    @Size(min = 8, max = 8, message = "O CEP deve ter 8 numeros")
-    private String cep;
+    private String telefone;
 
-    @Positive(message = "O valor deve ser positivo")
-    private int numero;
+    @NotBlank
+    private String reputacao;
     
 }

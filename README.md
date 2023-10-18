@@ -1,26 +1,33 @@
 # Challenge-Digital-Business API
 
-Bem-vindo à documentação da **Challenge-Digital-Business API**! Esta API fornece informações de consumidores, fornecedores e produtos. Abaixo, você encontrará detalhes sobre as principais classes e endpoints disponíveis.
+Bem-vindo à documentação da **Challenge-Digital-Business API**! Esta API fornece informações de usuarios, fornecedores e produtos. Abaixo, você encontrará detalhes sobre as principais classes e endpoints disponíveis.
+
+## Descrição do projeto
+Nossa automação inteligente realiza análises detalhadas de pedidos, auxiliando você a encontrar as melhores opções de compra para produtos específicos. Consideramos critérios cruciais como preço, qualidade, frete, tempo de entrega e custo-benefício para oferecer recomendações personalizadas.
 
 ## Classes
 
-### `Consumidor`
+### `Usuario`
 
-A classe `Consumidor` contém informações detalhadas sobre os consumidores da sua plataforma.
+A classe `Usuario` contém informações detalhadas sobre os usuario da sua plataforma.
 
 **Atributos:**
 
-- `id`: O identificador único do consumidor.
+- `cpf`: O identificador único do usuario.
   
-- `nome`: O nome completo da empresa consumidora.
+- `nome`: O nome completo da empresa usuario.
+
+- `email`: O email completo do usuario.
   
-- `rfq`: A solicitação de cotação (Request for Quotation) do consumidor para o fornecedor.
+- `cep`: O CEP (Código de Endereçamento Postal) do endereço do usuario.
   
-- `cnpj`: O CNPJ (Cadastro Nacional da Pessoa Jurídica) da empresa.
-  
-- `cep`: O CEP (Código de Endereçamento Postal) do endereço da empresa.
-  
-- `numero`: O número do local da empresa.
+- `numero`: O número do local da usuario.
+
+- `complemento`: O complemento do local do usuario.
+
+- `logradouro`: O logradouro do local do usuario.
+
+- `telefone`: O telefone do usuario.
 
 ### `Fornecedor`
 
@@ -33,10 +40,10 @@ A classe `Fornecedor` contém informações detalhadas sobre os fornecedores ass
 - `nome`: O nome completo do fornecedor.
   
 - `cnpj`: O CNPJ do fornecedor.
-  
-- `cep`: O CEP do endereço do fornecedor.
-  
-- `numero`: O número do local do fornecedor.
+
+- `telefone`: O telefone do fornecedor.
+
+- `reputacao;`: A telefone do reputacao;.
 
 ### `Produto`
 
@@ -58,9 +65,9 @@ A classe `Produto` contém informações detalhadas sobre os produtos disponíve
 
 ## Métodos GET
 
-- `GET /consumidores`: Retorna uma lista de todos os consumidores.
+- `GET /usuario`: Retorna uma lista de todos os usuario.
   
-- `GET /consumidores/{id}`: Retorna detalhes sobre um consumidor específico com base no ID.
+- `GET /usuario/{id}`: Retorna detalhes sobre um usuario específico com base no ID.
 
 - `GET /fornecedores`: Retorna uma lista de todos os fornecedores.
   
@@ -72,7 +79,7 @@ A classe `Produto` contém informações detalhadas sobre os produtos disponíve
 
 ## Métodos Post
   
-- `POST /consumidores`: Cria um novo consumidor com base nos dados fornecidos.
+- `POST /usuario`: Cria um novo usuario com base nos dados fornecidos.
 
 - `POST /fornecedores`: Cria um novo fornecedor com base nos dados fornecidos.
 
@@ -80,7 +87,7 @@ A classe `Produto` contém informações detalhadas sobre os produtos disponíve
 
 ## Métodos PUT
   
-- `PUT /consumidores/{id}`: Atualiza os detalhes de um consumidor existente com base no ID.
+- `PUT /usuario/{id}`: Atualiza os detalhes de um usuario existente com base no ID.
 
 - `PUT /fornecedores/{id}`: Atualiza os detalhes de um fornecedor existente com base no ID.
 
@@ -88,7 +95,7 @@ A classe `Produto` contém informações detalhadas sobre os produtos disponíve
 
 ## Métodos DELETE
   
-- `DELETE /consumidores/{id}`: Exclui um consumidor com base no ID.
+- `DELETE /usuario/{id}`: Exclui um usuario com base no ID.
   
 - `DELETE /fornecedores/{id}`: Exclui um fornecedor com base no ID.
   
@@ -98,16 +105,18 @@ Lembre-se de incluir os parâmetros necessários na sua solicitação para obter
 
 ## Exemplo JSON
 
-Aqui está um exemplo da estrutura JSON representando as informações do `Consumidor`:
+Aqui está um exemplo da estrutura JSON representando as informações do `usuario`:
 
 ```json
 {
-    "id": "Long",
-    "nome": "string",
-    "rfq": "string",
-    "cnpj": "string",
-    "cep": "string",
-    "numero": "int"
+    "cpf": "String",
+    "nome": "String",
+    "email": "String",
+    "cep": "String",
+    "numero": "Int",
+    "complemento": "String",
+    "logradouro": "String",
+    "telefone": "String"
 }
 ```
 
@@ -116,10 +125,10 @@ Aqui está um exemplo da estrutura JSON representando as informações do `Forne
 ```json
 {
     "id": "Long",
-    "nome": "string",
-    "cnpj": "string",
-    "cep": "string",
-    "numero": "int"
+    "nome": "String",
+    "cnpj": "String",
+    "telefone": "String",
+    "reputacao": "String"
 }
 ```
 
@@ -135,7 +144,7 @@ Aqui está um exemplo da estrutura JSON representando as informações do `Produ
 }
 ```
 
-## Códigos de retorno(Consumidor, fornecedor e produto)
+## Códigos de retorno(usuario, fornecedor e produto)
 
 - 200: Conexão e resposta bem-sucedidas.
 - 201: Registrado com sucesso.

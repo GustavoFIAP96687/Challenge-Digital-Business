@@ -17,21 +17,17 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Consumidor {
+public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long cpf;
 
     @NotBlank
     private String nome;
 
     @NotBlank
-    private String rfq;
-
-    @NotBlank
-    @Size(min = 14, max = 14, message = "O CNPJ deve ter 14 numeros")
-    private String cnpj;
+    private String email;
 
     @NotBlank
     @Size(min = 8, max = 8, message = "O CEP deve ter 8 numeros")
@@ -39,5 +35,14 @@ public class Consumidor {
 
     @Positive(message = "O valor deve ser positivo")
     private int numero;
+
+    @NotBlank
+    private String complemento;
+
+    @NotBlank
+    private String logradouro;
+
+    @NotBlank
+    private String telefone;
     
 }
