@@ -1,6 +1,9 @@
 # Challenge-Digital-Business API
 
-Bem-vindo à documentação da **Challenge-Digital-Business API**! Esta API fornece informações de consumidores, fornecedores e produtos. Abaixo, você encontrará detalhes sobre as principais classes e endpoints disponíveis.
+Bem-vindo à documentação da **Challenge-Digital-Business API**! Esta API fornece informações de usuarios, fornecedores e produtos. Abaixo, você encontrará detalhes sobre as principais classes e endpoints disponíveis.
+
+## Descrição do projeto
+Nossa automação inteligente realiza análises detalhadas de pedidos, auxiliando você a encontrar as melhores opções de compra para produtos específicos. Consideramos critérios cruciais como preço, qualidade, frete, tempo de entrega e custo-benefício para oferecer recomendações personalizadas.
 
 ## Classes
 
