@@ -35,27 +35,27 @@ public class ProdutoController {
 
     @PostMapping("/produtos")
     public ResponseEntity<Object> create(@RequestBody @Valid Produto produto) {
-        log.info("cadastrando produto - " + produto);
+        log.info("Cadastrando produto - " + produto);
         repository.save(produto);
         return ResponseEntity.status(HttpStatus.CREATED).body(produto);
     }
 
         @GetMapping("/produtos/{id}")
     public ResponseEntity<Produto> show(@PathVariable Long id){
-        log.info("mostrar produto com id " + id);
+        log.info("Mostrar produto com id " + id);
         return ResponseEntity.ok(getProdutoById(id));
     }
 
     @DeleteMapping("/produtos/{id}")
     public ResponseEntity<Object> destroy(@PathVariable Long id){
-        log.info("apagando produto com id " + id);
+        log.info("Apagando produto com id " + id);
         repository.delete(getProdutoById(id));
         return ResponseEntity.noContent().build();
     }
 
     @PutMapping("/produtos/{id}")
     public ResponseEntity<Produto> update(@PathVariable Long id, @RequestBody Produto produto){
-        log.info("atualizando dados do aluno com id " + id);
+        log.info("Atualizando dados do aluno com id " + id);
         getProdutoById(id);
         produto.setId(id);
         repository.save(produto);

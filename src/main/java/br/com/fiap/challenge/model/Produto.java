@@ -39,6 +39,4 @@ public class Produto {
     private int quantidade;
 
 
-
-    
 }

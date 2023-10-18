@@ -36,27 +36,27 @@ public class FornecedorController {
 
     @PostMapping("/fornecedor")
     public ResponseEntity<Object> create(@RequestBody @Valid Fornecedor fornecedor) {
-        log.info("cadastrando fornecedor - " + fornecedor);
+        log.info("Cadastrando fornecedor - " + fornecedor);
         repository.save(fornecedor);
         return ResponseEntity.status(HttpStatus.CREATED).body(fornecedor);
     }
 
-    @GetMapping("/fornecedor/{id}")
+    @GetMapping("/Fornecedor/{id}")
     public ResponseEntity<Fornecedor> show(@PathVariable Long id){
         log.info("mostrar fornecedor com id " + id);
         return ResponseEntity.ok(getFornecedorById(id));
     }
 
-    @DeleteMapping("/fornecedor/{id}")
+    @DeleteMapping("/Fornecedor/{id}")
     public ResponseEntity<Object> destroy(@PathVariable Long id){
-        log.info("apagando fornecedor com id " + id);
+        log.info("Apagando fornecedor com id " + id);
         repository.delete(getFornecedorById(id));
         return ResponseEntity.noContent().build();
     }
 
     @PutMapping("/fornecedor/{id}")
     public ResponseEntity<Fornecedor> update(@PathVariable Long id, @RequestBody Fornecedor fornecedor){
-        log.info("atualizando dados do fornecedor com id " + id);
+        log.info("Atualizando dados do fornecedor com id " + id);
         getFornecedorById(id);
         fornecedor.setId(id);
         repository.save(fornecedor);
