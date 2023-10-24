@@ -45,9 +45,9 @@ A classe `Fornecedor` contém informações detalhadas sobre os fornecedores ass
 
 - `reputacao;`: A telefone do reputacao;.
 
-### `Produto`
+### `itens`
 
-A classe `Produto` contém informações detalhadas sobre os produtos disponíveis na sua plataforma.
+A classe `itens` contém informações detalhadas sobre os produtos disponíveis na sua plataforma.
 
 **Atributos:**
 
@@ -61,6 +61,18 @@ A classe `Produto` contém informações detalhadas sobre os produtos disponíve
   
 - `quantidade`: Quantidade disponível do produto.
 
+### `tipo_item`
+
+A classe `tipo_item` contém informações detalhadas sobre os tipos dos items.
+
+**Atributos:**
+
+- `id`: O identificador único do produto.
+  
+- `nome`: O nome do produto.
+  
+- `desc`: A descrição detalhada do produto.
+
 # Endpoints
 
 ## Métodos GET
@@ -73,9 +85,13 @@ A classe `Produto` contém informações detalhadas sobre os produtos disponíve
   
 - `GET /fornecedores/{id}`: Retorna detalhes sobre um fornecedor específico com base no ID.
 
-- `GET /produtos`: Retorna uma lista de todos os produtos disponíveis.
+- `GET /item`: Retorna uma lista de todos os itens disponíveis.
   
-- `GET /produtos/{id}`: Retorna detalhes sobre um produto específico com base no ID.
+- `GET /item/{id}`: Retorna detalhes sobre um item específico com base no ID.
+
+- `GET /tipo_item`: Retorna uma lista de todos os tipos de itens disponíveis.
+  
+- `GET /tipo_item/{id}`: Retorna detalhes sobre um tipo de item específico com base no ID.
 
 ## Métodos Post
   
@@ -83,7 +99,9 @@ A classe `Produto` contém informações detalhadas sobre os produtos disponíve
 
 - `POST /fornecedores`: Cria um novo fornecedor com base nos dados fornecidos.
 
-- `POST /produtos`: Cria um novo produto com base nos dados fornecidos.
+- `POST /item`: Cria um novo item com base nos dados fornecidos.
+
+- `POST /tipo_item`: Cria um tipo de item com base nos dados fornecidos.
 
 ## Métodos PUT
   
@@ -91,7 +109,9 @@ A classe `Produto` contém informações detalhadas sobre os produtos disponíve
 
 - `PUT /fornecedores/{id}`: Atualiza os detalhes de um fornecedor existente com base no ID.
 
-- `PUT /produtos/{id}`: Atualiza os detalhes de um produto existente com base no ID.
+- `PUT /item/{id}`: Atualiza os detalhes de um item existente com base no ID.
+
+- `PUT /tipo_item/{id}`: Atualiza os detalhes de um tipo de item existente com base no ID.
 
 ## Métodos DELETE
   
@@ -99,7 +119,9 @@ A classe `Produto` contém informações detalhadas sobre os produtos disponíve
   
 - `DELETE /fornecedores/{id}`: Exclui um fornecedor com base no ID.
   
-- `DELETE /produtos/{id}`: Exclui um produto com base no ID.
+- `DELETE /item/{id}`: Exclui um item com base no ID.
+
+- `DELETE /tipo_item/{id}`: Exclui um tipo de item com base no ID.
 
 Lembre-se de incluir os parâmetros necessários na sua solicitação para obter os resultados desejados.
 
@@ -132,7 +154,7 @@ Aqui está um exemplo da estrutura JSON representando as informações do `Forne
 }
 ```
 
-Aqui está um exemplo da estrutura JSON representando as informações do `Produto`:
+Aqui está um exemplo da estrutura JSON representando as informações do `item`:
 
 ```json
 {
@@ -144,7 +166,7 @@ Aqui está um exemplo da estrutura JSON representando as informações do `Produ
 }
 ```
 
-## Códigos de retorno(usuario, fornecedor e produto)
+## Códigos de retorno(usuario, fornecedor, produto, item e tipo de item)
 
 - 200: Conexão e resposta bem-sucedidas.
 - 201: Registrado com sucesso.
