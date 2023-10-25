@@ -73,6 +73,20 @@ A classe `tipo_item` contém informações detalhadas sobre os tipos dos items.
   
 - `desc`: A descrição detalhada do produto.
 
+### `compra`
+
+A classe `compra` contém informações detalhadas sobre as compras dos items.
+
+**Atributos:**
+
+- `id`: O identificador único da compra.
+  
+- `valor_total`: O valor total da compra.
+  
+- `data_compra`: A data da compra.
+
+- `cod_contrato`: O código de contrato da compra.
+
 # Endpoints
 
 ## Métodos GET
@@ -93,6 +107,10 @@ A classe `tipo_item` contém informações detalhadas sobre os tipos dos items.
   
 - `GET /tipo_item/{id}`: Retorna detalhes sobre um tipo de item específico com base no ID.
 
+- `GET /compra`: Retorna uma lista de todas as compras realizadas.
+
+- `GET /compra/{id}`: Retorna uma lista de uma compra especifica com base no ID.
+
 ## Métodos Post
   
 - `POST /usuario`: Cria um novo usuario com base nos dados fornecidos.
@@ -102,6 +120,8 @@ A classe `tipo_item` contém informações detalhadas sobre os tipos dos items.
 - `POST /item`: Cria um novo item com base nos dados fornecidos.
 
 - `POST /tipo_item`: Cria um tipo de item com base nos dados fornecidos.
+
+- `POST /compra`: Cria uma nova compra com base nos dados fornecidos.
 
 ## Métodos PUT
   
@@ -113,6 +133,8 @@ A classe `tipo_item` contém informações detalhadas sobre os tipos dos items.
 
 - `PUT /tipo_item/{id}`: Atualiza os detalhes de um tipo de item existente com base no ID.
 
+- `PUT /compra/{id}`: Atualiza os detalhes de cada compra existente com base no ID.
+
 ## Métodos DELETE
   
 - `DELETE /usuario/{id}`: Exclui um usuario com base no ID.
@@ -122,6 +144,8 @@ A classe `tipo_item` contém informações detalhadas sobre os tipos dos items.
 - `DELETE /item/{id}`: Exclui um item com base no ID.
 
 - `DELETE /tipo_item/{id}`: Exclui um tipo de item com base no ID.
+
+- `DELETE /compra/{id}`: Exclui uma compra com base no ID.
 
 Lembre-se de incluir os parâmetros necessários na sua solicitação para obter os resultados desejados.
 
@@ -164,9 +188,20 @@ Aqui está um exemplo da estrutura JSON representando as informações do `item`
     "valor": "double",
     "quantidade": "int"
 }
+
+Aqui está um exemplo da estrutura JSON representando as informações da `compra`:
+
+```json
+{
+    "id": "long",
+    "valor_total": "double",
+    "Data": "LocalDate",
+    "cod_contrato": "int"
+}
+
 ```
 
-## Códigos de retorno(usuario, fornecedor, produto, item e tipo de item)
+## Códigos de retorno(usuario, fornecedor, produto, item, tipo de item e compra)
 
 - 200: Conexão e resposta bem-sucedidas.
 - 201: Registrado com sucesso.

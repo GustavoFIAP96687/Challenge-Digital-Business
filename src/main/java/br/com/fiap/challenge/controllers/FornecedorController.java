@@ -41,13 +41,13 @@ public class FornecedorController {
         return ResponseEntity.status(HttpStatus.CREATED).body(fornecedor);
     }
 
-    @GetMapping("/Fornecedor/{id}")
+    @GetMapping("/fornecedor/{id}")
     public ResponseEntity<Fornecedor> show(@PathVariable Long id){
         log.info("mostrar fornecedor com id " + id);
         return ResponseEntity.ok(getFornecedorById(id));
     }
 
-    @DeleteMapping("/Fornecedor/{id}")
+    @DeleteMapping("/fornecedor/{id}")
     public ResponseEntity<Object> destroy(@PathVariable Long id){
         log.info("Apagando fornecedor com id " + id);
         repository.delete(getFornecedorById(id));

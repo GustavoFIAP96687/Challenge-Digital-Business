@@ -28,32 +28,32 @@ public class ProdutoController {
     @Autowired
     ProdutoRepository repository;
 
-    @GetMapping("/produtos")
+    @GetMapping("/produto")
     public List<Produto> index(){
         return repository.findAll();
     }
 
-    @PostMapping("/produtos")
+    @PostMapping("/produto")
     public ResponseEntity<Object> create(@RequestBody @Valid Produto produto) {
         log.info("Cadastrando produto - " + produto);
         repository.save(produto);
         return ResponseEntity.status(HttpStatus.CREATED).body(produto);
     }
 
-        @GetMapping("/produtos/{id}")
+        @GetMapping("/produto/{id}")
     public ResponseEntity<Produto> show(@PathVariable Long id){
         log.info("Mostrar produto com id " + id);
         return ResponseEntity.ok(getProdutoById(id));
     }
 
-    @DeleteMapping("/produtos/{id}")
+    @DeleteMapping("/produto/{id}")
     public ResponseEntity<Object> destroy(@PathVariable Long id){
         log.info("Apagando produto com id " + id);
         repository.delete(getProdutoById(id));
         return ResponseEntity.noContent().build();
     }
 
-    @PutMapping("/produtos/{id}")
+    @PutMapping("/produto/{id}")
     public ResponseEntity<Produto> update(@PathVariable Long id, @RequestBody Produto produto){
         log.info("Atualizando dados do aluno com id " + id);
         getProdutoById(id);
