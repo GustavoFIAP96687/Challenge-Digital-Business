@@ -32,6 +32,12 @@ public class Produto {
     @NotNull
     private Double valor;
 
+    @NotBlank
+    private String qualidade;
+
+    @NotBlank
+    private String condicao_entrega;
+
     @Positive(message = "A quantidade deve ser positiva")
     @NotNull
     private int quantidade;

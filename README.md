@@ -45,9 +45,9 @@ A classe `Fornecedor` contém informações detalhadas sobre os fornecedores ass
 
 - `reputacao;`: A telefone do reputacao;.
 
-### `itens`
+### `Produto`
 
-A classe `itens` contém informações detalhadas sobre os produtos disponíveis na sua plataforma.
+A classe `Produto` contém informações detalhadas sobre os produtos disponíveis na sua plataforma.
 
 **Atributos:**
 
@@ -61,17 +61,9 @@ A classe `itens` contém informações detalhadas sobre os produtos disponíveis
   
 - `quantidade`: Quantidade disponível do produto.
 
-### `tipo_item`
+- `qualidade`: Quantidade do produto.
 
-A classe `tipo_item` contém informações detalhadas sobre os tipos dos items.
-
-**Atributos:**
-
-- `id`: O identificador único do produto.
-  
-- `nome`: O nome do produto.
-  
-- `desc`: A descrição detalhada do produto.
+- `codicao_entrega`: condição de entrega do produto.
 
 ### `compra`
 
@@ -99,13 +91,9 @@ A classe `compra` contém informações detalhadas sobre as compras dos items.
   
 - `GET /fornecedores/{id}`: Retorna detalhes sobre um fornecedor específico com base no ID.
 
-- `GET /item`: Retorna uma lista de todos os itens disponíveis.
+- `GET /produto`: Retorna uma lista de todos os produtos disponíveis.
   
-- `GET /item/{id}`: Retorna detalhes sobre um item específico com base no ID.
-
-- `GET /tipo_item`: Retorna uma lista de todos os tipos de itens disponíveis.
-  
-- `GET /tipo_item/{id}`: Retorna detalhes sobre um tipo de item específico com base no ID.
+- `GET /produto/{id}`: Retorna detalhes sobre um produto específico com base no ID.
 
 - `GET /compra`: Retorna uma lista de todas as compras realizadas.
 
@@ -117,9 +105,7 @@ A classe `compra` contém informações detalhadas sobre as compras dos items.
 
 - `POST /fornecedores`: Cria um novo fornecedor com base nos dados fornecidos.
 
-- `POST /item`: Cria um novo item com base nos dados fornecidos.
-
-- `POST /tipo_item`: Cria um tipo de item com base nos dados fornecidos.
+- `POST /produto`: Cria um novo produto com base nos dados fornecidos.
 
 - `POST /compra`: Cria uma nova compra com base nos dados fornecidos.
 
@@ -129,9 +115,7 @@ A classe `compra` contém informações detalhadas sobre as compras dos items.
 
 - `PUT /fornecedores/{id}`: Atualiza os detalhes de um fornecedor existente com base no ID.
 
-- `PUT /item/{id}`: Atualiza os detalhes de um item existente com base no ID.
-
-- `PUT /tipo_item/{id}`: Atualiza os detalhes de um tipo de item existente com base no ID.
+- `PUT /produto/{id}`: Atualiza os detalhes de um produto existente com base no ID.
 
 - `PUT /compra/{id}`: Atualiza os detalhes de cada compra existente com base no ID.
 
@@ -141,9 +125,7 @@ A classe `compra` contém informações detalhadas sobre as compras dos items.
   
 - `DELETE /fornecedores/{id}`: Exclui um fornecedor com base no ID.
   
-- `DELETE /item/{id}`: Exclui um item com base no ID.
-
-- `DELETE /tipo_item/{id}`: Exclui um tipo de item com base no ID.
+- `DELETE /produto/{id}`: Exclui um produto com base no ID.
 
 - `DELETE /compra/{id}`: Exclui uma compra com base no ID.
 
@@ -178,7 +160,7 @@ Aqui está um exemplo da estrutura JSON representando as informações do `Forne
 }
 ```
 
-Aqui está um exemplo da estrutura JSON representando as informações do `item`:
+Aqui está um exemplo da estrutura JSON representando as informações do `produto`:
 
 ```json
 {
@@ -186,7 +168,9 @@ Aqui está um exemplo da estrutura JSON representando as informações do `item`
     "nome": "string",
     "desc": "string",
     "valor": "double",
-    "quantidade": "int"
+    "quantidade": "int",
+    "qualidade": "string",
+    "condicao_produto": "string"
 }
 
 Aqui está um exemplo da estrutura JSON representando as informações da `compra`:
