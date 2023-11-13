@@ -1,9 +1,36 @@
-# Challenge-Digital-Business API
+# Procura Certa API
 
-Bem-vindo à documentação da **Challenge-Digital-Business API**! Esta API fornece informações de usuarios, fornecedores e produtos. Abaixo, você encontrará detalhes sobre as principais classes e endpoints disponíveis.
+Bem-vindo à documentação da **Procura Certa API**! Esta API fornece informações de usuarios, fornecedores e produtos. Abaixo, você encontrará detalhes sobre as principais classes e endpoints disponíveis.
 
 ## Descrição do projeto
-Nossa automação inteligente realiza análises detalhadas de pedidos, auxiliando você a encontrar as melhores opções de compra para produtos específicos. Consideramos critérios cruciais como preço, qualidade, frete, tempo de entrega e custo-benefício para oferecer recomendações personalizadas.
+Encontrar um bom fornecedor e escolher os produtos e serviços certos no
+mercado pode ser um verdadeiro desafio para quem faz compras em nome de
+uma empresa. A tarefa exige cuidado e atenção, especialmente quando se trata
+de compras de alto valor ou itens com necessidades específicas.
+O mercado grande e vasto, com inúmeras opções disponíveis, possuí uma
+gama de escolhas que pode tornar a decisão um pouco mais difícil. Além disso, os
+preços variam significativamente entre os fornecedores, o que torna a busca pela
+melhor oferta um desafio em si. É importante equilibrar qualidade e custo, o que
+nem sempre é simples, especialmente quando a qualidade do que está sendo
+comprado é incerta.
+Se a empresa precisa de produtos ou serviços altamente específicos,
+encontrar um fornecedor que atenda a essas necessidades pode ser uma tarefa
+adicional. Por fim, a reputação dos fornecedores é uma preocupação constante,
+pois é vital garantir que entreguem o que prometem.
+Em resumo, realizar a cotação de compras é desafiador devido à ampla
+variedade de escolhas, às diferenças de preço, à incerteza em relação à
+qualidade, às necessidades específicas a serem atendidas e à necessidade de
+verificar a confiabilidade dos fornecedores. É um processo que exige paciência e
+uma avaliação cuidadosa para tomar decisões que beneficiem a empresa.
+
+## Escopo do produto
+Nosso projeto se chamará “Procura Certa” e será um aplicativo
+desenvolvido em React Native que tem como objetivo automatizar o processo de
+cotação de compras para compradores. Com uma abordagem focada na
+praticidade e eficiência, o aplicativo permite que os compradores encontrem
+fornecedores de maneira rápida e eficaz, com base em suas especificações e
+requisitos.
+
 
 ## Classes
 
@@ -185,7 +212,7 @@ Aqui está um exemplo da estrutura JSON representando as informações da `compr
 
 ```
 
-## Códigos de retorno(usuario, fornecedor, produto, item, tipo de item e compra)
+## Códigos de retorno(usuario, fornecedor, produto, item e compra)
 
 - 200: Conexão e resposta bem-sucedidas.
 - 201: Registrado com sucesso.
