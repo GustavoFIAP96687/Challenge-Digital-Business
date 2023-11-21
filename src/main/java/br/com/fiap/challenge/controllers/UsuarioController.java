@@ -41,31 +41,31 @@ public class UsuarioController {
     }
 
         @GetMapping("/usuario/{id}")
-    public ResponseEntity<Usuario> show(@PathVariable Long cpf){
-        log.info("Mostrar usuario com cpf " + cpf);
-        return ResponseEntity.ok(getUsuarioByCpf(cpf));
+    public ResponseEntity<Usuario> show(@PathVariable Long id){
+        log.info("Mostrar usuario com id " + id);
+        return ResponseEntity.ok(getUsuarioById(id));
     }
 
     @DeleteMapping("/usuario/{id}")
-    public ResponseEntity<Object> destroy(@PathVariable Long cpf){
-        log.info("Apagando usuario com cpf " + cpf);
-        repository.delete(getUsuarioByCpf(cpf));
+    public ResponseEntity<Object> destroy(@PathVariable Long id){
+        log.info("Apagando usuario com id " + id);
+        repository.delete(getUsuarioById(id));
         return ResponseEntity.noContent().build();
     }
 
     @PutMapping("/usuario/{id}")
-    public ResponseEntity<Usuario> update(@PathVariable Long cpf, @RequestBody Usuario usuario){
-        log.info("Atualizando dados do usuario com cpf " + cpf);
-        getUsuarioByCpf(cpf);
-        usuario.setCpf(cpf);
+    public ResponseEntity<Usuario> update(@PathVariable Long id, @RequestBody Usuario usuario){
+        log.info("Atualizando dados do usuario com id " + id);
+        getUsuarioById(id);
+        usuario.setId(id);
         repository.save(usuario);
 
         return ResponseEntity.ok(usuario);
     }
 
 
-    private Usuario getUsuarioByCpf(Long cpf){
-        return repository.findById(cpf).orElseThrow(() -> { 
+    private Usuario getUsuarioById(Long id){
+        return repository.findById(id).orElseThrow(() -> { 
                 return new RuntimeException();
             });
         }

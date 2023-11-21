@@ -36,11 +36,13 @@ requisitos.
 
 ### `Usuario`
 
-A classe `Usuario` contém informações detalhadas sobre os usuario da sua plataforma.
+A classe `Usuario` contém informações detalhadas sobre os usuario da plataforma.
 
 **Atributos:**
 
-- `cpf`: O identificador único do usuario.
+- `id`: O identificador único do usuario.
+
+- `cpf`: O CPF do usuario.
   
 - `nome`: O nome completo da empresa usuario.
 
@@ -58,7 +60,7 @@ A classe `Usuario` contém informações detalhadas sobre os usuario da sua plat
 
 ### `Fornecedor`
 
-A classe `Fornecedor` contém informações detalhadas sobre os fornecedores associados à sua plataforma.
+A classe `Fornecedor` contém informações detalhadas sobre os fornecedores associados a plataforma.
 
 **Atributos:**
 
@@ -70,7 +72,7 @@ A classe `Fornecedor` contém informações detalhadas sobre os fornecedores ass
 
 - `telefone`: O telefone do fornecedor.
 
-- `reputacao;`: A telefone do reputacao;.
+- `reputacao;`: A reputação do fornecedor;.
 
 ### `Produto`
 
@@ -164,6 +166,7 @@ Aqui está um exemplo da estrutura JSON representando as informações do `usuar
 
 ```json
 {
+    "id": "Long",
     "cpf": "String",
     "nome": "String",
     "email": "String",
@@ -197,7 +200,7 @@ Aqui está um exemplo da estrutura JSON representando as informações do `produ
     "valor": "double",
     "quantidade": "int",
     "qualidade": "string",
-    "condicao_produto": "string"
+    "condicao_entrega": "string"
 }
 
 Aqui está um exemplo da estrutura JSON representando as informações da `compra`:
@@ -206,7 +209,7 @@ Aqui está um exemplo da estrutura JSON representando as informações da `compr
 {
     "id": "long",
     "valor_total": "double",
-    "Data": "LocalDate",
+    "Data": "LocalDate(YYYY-MM-DD)",
     "cod_contrato": "int"
 }
 

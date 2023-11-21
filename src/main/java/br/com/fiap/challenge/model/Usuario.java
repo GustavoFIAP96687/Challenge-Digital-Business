@@ -19,7 +19,10 @@ public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long cpf;
+    private Long id;
+
+    @NotBlank
+    private String cpf;
 
     @NotBlank
     private String nome;

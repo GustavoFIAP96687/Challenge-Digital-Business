@@ -25,6 +25,7 @@ public class Compra {
     @NotNull
     private Double valor_total;
 
+    @NotNull
     private LocalDate data_compra;
 
     @NotNull
