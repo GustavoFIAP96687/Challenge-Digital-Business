@@ -226,4 +226,4 @@ Aqui está um exemplo da estrutura JSON representando as informações da `compr
 
 ## Diagrama de arquitetura macro
 
-![Arquitetura](https://raw.githubusercontent.com/GustavoFIAP96687/Challenge-Digital-Business/master/img/Arquitetura.PNG)
+![Arquitetura](https://raw.githubusercontent.com/GustavoFIAP96687/Challenge-Digital-Business/master/img/Arquitetura.png)
