@@ -223,3 +223,7 @@ Aqui está um exemplo da estrutura JSON representando as informações da `compr
 - 404: Página ou recurso não encontrado.
 - 405: Acesso restrito ao recurso.
 - 500: Erro interno do servidor.
+
+## Diagrama de arquitetura macro
+
+![Modelo fisico](https://raw.githubusercontent.com/GustavoFIAP96687/Challenge-Digital-Business/master/Modelos/ModelagemFisica.PNG)
