@@ -1,5 +1,7 @@
 package br.com.fiap.challenge.model;
 
+import jakarta.persistence.Column;
+
 //import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
@@ -20,26 +22,32 @@ import lombok.NoArgsConstructor;
 public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID_PRODUTO")
     private Long id;
 
-    @NotBlank
+    @NotBlank(message = "O nome não pode estar em branco")
     private String nome;
 
     @NotBlank
+    @Column(name = "DESC_PRODUTO")
     private String desc;
     
     @Positive(message = "O valor deve ser positivo")
-    @NotNull
+    @NotNull(message = "O valor não pode estar em branco")
+    @Column(name = "VAL_PRODUTO")
     private Double valor;
 
-    @NotBlank
+    @NotBlank(message = "A qualidade não pode estar em branco")
+    @Column(name = "QLD_PRODUTO")
     private String qualidade;
 
-    @NotBlank
+    @NotBlank(message = "A condição não pode estar em branco")
+    @Column(name = "CON_PRODUTO")
     private String condicao_entrega;
 
     @Positive(message = "A quantidade deve ser positiva")
-    @NotNull
+    @NotNull(message = "A quantidade não pode estar em branco")
+    @Column(name = "QTD_PRODUTO")
     private int quantidade;
 
 

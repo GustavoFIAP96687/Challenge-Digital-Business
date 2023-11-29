@@ -1,5 +1,7 @@
 package br.com.fiap.challenge.model;
 
+import jakarta.persistence.Column;
+
 //import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
@@ -20,19 +22,24 @@ public class Fornecedor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID_FORNECEDOR")
     private Long id;
 
-    @NotBlank
+    @NotBlank(message = "O nome não pode estar em branco")
+    @Column(name = "NM_FORNECEDOR")
     private String nome;
 
-    @NotBlank
+    @NotBlank(message = "O CNPJ não pode estar em branco")
     @Size(min = 14, max = 14, message = "O CNPJ deve ter 14 numeros")
+    @Column(name = "CNPJ_FORNECEDOR")
     private String cnpj;
 
-    @NotBlank
+    @NotBlank(message = "O telefone não pode estar em branco")
+    @Column(name = "TEL_FORNECEDOR")
     private String telefone;
 
-    @NotBlank
+    @NotBlank(message = "A reputação não pode estar em branco")
+    @Column(name = "REP_FORNECEDOR")
     private String reputacao;
     
 }
