@@ -1,6 +1,6 @@
-# Procura Certa API
+# Auto Assistant
 
-Bem-vindo à documentação da **Procura Certa API**! Esta API fornece informações de usuarios, fornecedores e produtos. Abaixo, você encontrará detalhes sobre as principais classes e endpoints disponíveis.
+Bem-vindo à documentação da **Auto Assistant API**! Esta API fornece informações de usuarios, fornecedores e produtos. Abaixo, você encontrará detalhes sobre as principais classes e endpoints disponíveis.
 
 ## Descrição do projeto
 Encontrar um bom fornecedor e escolher os produtos e serviços certos no
@@ -24,7 +24,7 @@ verificar a confiabilidade dos fornecedores. É um processo que exige paciência
 uma avaliação cuidadosa para tomar decisões que beneficiem a empresa.
 
 ## Escopo do produto
-Nosso projeto se chamará “Procura Certa” e será um aplicativo
+Nosso projeto se chamará “Auto Assistant” e será um aplicativo
 desenvolvido em React Native que tem como objetivo automatizar o processo de
 cotação de compras para compradores. Com uma abordagem focada na
 praticidade e eficiência, o aplicativo permite que os compradores encontrem
